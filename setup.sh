@@ -1,17 +1,23 @@
 #!/bin/bash
-function echo_and_run() {
+function erun() {
   local word=$1
   echo -n '$ '
   for (( i=0; i < ${#word}; i++ )); do
     echo -n "${word:$i:1}"
-    sleep 0.05
+    sleep 0.07
   done
-  sleep 0.1
+  sleep 0.07
   echo ""
-  $1
+  eval "$1"
 }
 
-function set_scene() {
+function set_up() {
   rm -rf blkar-demo/
   mkdir blkar-demo
+  cd blkar-demo
+}
+
+function clean() {
+  cd ..
+  rm -rf blkar-demo/
 }

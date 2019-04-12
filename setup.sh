@@ -1,5 +1,5 @@
 #!/bin/bash
-function erun() {
+function print_command() {
   local word=$1
   echo -n '$ '
   for (( i=0; i < ${#word}; i++ )); do
@@ -8,7 +8,16 @@ function erun() {
   done
   sleep 0.07
   echo ""
+}
+
+function erun() {
+  print_command $1
   eval "$1"
+}
+
+function erun_y() {
+  print_command $1
+  eval "yes | $1"
 }
 
 function set_up() {

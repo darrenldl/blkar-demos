@@ -24,7 +24,7 @@ erun 'blkar check -v test.ecsbx'
 
 erun '# we noticed a number of blocks failed the check, so we try to repair'
 
-erun 'blkar repair -y -v test.ecsbx'
+erun_y 'blkar repair -v test.ecsbx'
 
 erun '# repairs were successful, so we decode the archive'
 

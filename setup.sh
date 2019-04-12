@@ -11,12 +11,12 @@ function print_command() {
 }
 
 function erun() {
-  print_command $1
+  print_command "$1"
   eval "$1"
 }
 
 function erun_y() {
-  print_command $1
+  print_command "$1"
   eval "yes | $1"
 }
 

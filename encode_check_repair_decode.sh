@@ -18,13 +18,13 @@ erun 'blkar check test.ecsbx'
 
 erun 'dd if=/dev/urandom of=test.ecsbx bs=123 seek=$((RANDOM % 100)) count=30 conv=notrunc'
 
-erun 'blkar check test.ecsbx'
+erun 'blkar check -v test.ecsbx'
 
 erun '# we noticed a number of blocks failed the check, so we try to repair'
 
-erun 'blkar repair -y test.ecsbx'
+erun 'blkar repair -y -v test.ecsbx'
 
-erun 'blkar check test.ecsbx'
+erun 'blkar check -v test.ecsbx'
 
 erun '# repairs were successful, so we decode the archive'
 

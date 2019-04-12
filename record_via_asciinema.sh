@@ -5,7 +5,7 @@ if [[ $1 == "" ]]; then
   exit 1
 fi
 
-demo="$1".sh
+demo=$1
 cast_filename=$1.cast
 
 if [ ! -f "$demo" ]; then

@@ -12,12 +12,12 @@ function erun() {
 }
 
 function set_up() {
-  rm -rf blkar-demo/
-  mkdir blkar-demo
-  cd blkar-demo
+  rm -rf demo/
+  mkdir demo
+  cd demo
 }
 
 function clean() {
   cd ..
-  rm -rf blkar-demo/
+  rm -rf demo/
 }

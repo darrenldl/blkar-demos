@@ -17,7 +17,7 @@ function erun() {
 
 function erun_y() {
   print_command "$1"
-  eval "yes | $1"
+  eval "echo y | $1"
 }
 
 function set_up() {

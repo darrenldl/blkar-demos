@@ -8,9 +8,11 @@ fi
 demo=$1
 cast_filename=$1.cast
 
+title=$(grep "title" $demo | cut -d ' ' -f 4-)
+
 if [ ! -f "$demo" ]; then
   echo "Demo \"$demo\" does not exist"
   exit 1
 fi
 
-asciinema rec $cast_filename --overwrite -c ./$demo
+asciinema rec -t "$title" $cast_filename --overwrite -c ./$demo

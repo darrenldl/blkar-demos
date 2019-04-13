@@ -14,7 +14,7 @@ erun '# we can do this by picking version 1, 2, or 3, depending on the block siz
 
 erun '# we look at the table from help message first'
 
-erun '# grep is used so only table is shown'
+erun '# grep is used so only the table is shown'
 
 erun 'blkar encode -h | grep -A 20 -- --sbx-version'
 

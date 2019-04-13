@@ -30,3 +30,11 @@ function clean() {
   cd ..
   rm -rf demo/
 }
+
+function make_blank_file_MB() {
+  truncate -s "$2"M "$1"
+}
+
+function make_random_file_MB() {
+  dd if=/dev/urandom of="$2" bs=1024 count=$(("$1" * 1024)) &>/dev/null
+}

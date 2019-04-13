@@ -10,6 +10,8 @@ make_blank_file_MB test 10
 
 blkar encode test &>/dev/null
 
+rm test
+
 erun 'ls -l'
 
 erun 'blkar show --guess-burst --pv 0 test.ecsbx 2>&1 | grep "Best guess"'

@@ -17,7 +17,7 @@ fi
 
 asciinema rec -t "$title" "$cast_filename" --overwrite -c ./"$demo"
 
-upload_yn=$(read -p "Upload to asciinema? " -n 1 -r)
+read -p "Upload to asciinema? " -n 1 -r upload_yn
 
 if [[ $upload_yn == "y" ]]; then
     asciinema upload "$cast_filename"

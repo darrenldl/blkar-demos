@@ -15,10 +15,10 @@ if [ ! -f "$demo" ]; then
   exit 1
 fi
 
-asciinema rec -t "$title" $cast_filename --overwrite -c ./$demo
+asciinema rec -t "$title" "$cast_filename" --overwrite -c ./"$demo"
 
 upload_yn=(read -p "Upload to asciinema?" -n 1 -r)
 
 if [[ $upload_yn == "y" ]]; then
-    asciinema upload $cast_filename
+    asciinema upload "$cast_filename"
 fi

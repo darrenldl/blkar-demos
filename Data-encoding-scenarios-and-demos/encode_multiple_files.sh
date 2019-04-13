@@ -6,9 +6,9 @@ source setup.sh
 
 set_up
 
-truncate -s 5M test0
-truncate -s 5M test1
-truncate -s 5M test2
+make_blank_file_MB test0 5
+make_blank_file_MB test1 5
+make_blank_file_MB test2 5
 
 erun 'ls -l'
 

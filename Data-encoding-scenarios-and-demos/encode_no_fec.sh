@@ -6,7 +6,7 @@ source setup.sh
 
 set_up
 
-truncate -s 10M test
+make_blank_file_MB test 10
 
 erun 'ls -l'
 

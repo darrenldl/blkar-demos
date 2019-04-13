@@ -6,7 +6,7 @@ source setup.sh
 
 set_up
 
-dd if=/dev/urandom of=test bs=1024 count=1024
+dd if=/dev/urandom of=test bs=1024 count=1024 &>/dev/null
 
 erun 'ls -l'
 

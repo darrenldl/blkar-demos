@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# title : Blkar demo - encode no FEC
+
 source setup.sh
 
 set_up

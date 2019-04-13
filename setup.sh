@@ -36,5 +36,5 @@ function make_blank_file_MB() {
 }
 
 function make_random_file_MB() {
-  dd if=/dev/urandom of="$2" bs=1024 count=$(("$1" * 1024)) &>/dev/null
+  dd if=/dev/urandom of="$1" bs=1024 count=$(("$2" * 1024)) &>/dev/null
 }

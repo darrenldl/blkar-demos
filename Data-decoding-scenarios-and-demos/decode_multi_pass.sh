@@ -6,39 +6,41 @@ source setup.sh
 
 set_up
 
-truncate -s 10M test
+dd if=/dev/urandom of=test bs=1024 count=1024
 
 erun 'ls -l'
 
-erun '# we first encode the file, and duplicate archive three times'
+erun '# we first encode the file, and duplicate the archive'
 
-erun '# we then corrupt archives at different spots, and merge output file using deode --multi-pass output'
+erun '# we then corrupt archives at different spots, and merge output file using deode --multi-pass'
 
 erun '# finally we check that the output file is same as the original one'
 
-erun 'blkar encode test'
+erun 'blkar encode --sbx-version 1 test'
 
-erun 'cp test.ecsbx test.ecsbx.0'
-erun 'cp test.ecsbx test.ecsbx.1'
-erun 'cp test.ecsbx test.ecsbx.2'
-erun 'rm test.ecsbx'
+erun 'cp test.sbx test.sbx.0'
+erun 'cp test.sbx test.sbx.1'
+erun 'rm test.sbx'
 
 erun '# corrupt first archive'
 
-erun 'dd if=/dev/urandom of=test.ecsbx.0 bs=512 seek=1 count=10'
+erun 'dd if=/dev/urandom of=test.sbx.0 bs=512 seek=1 count=10 conv=notrunc'
 
-erun 'blkar check test.ecsbx.0'
+erun 'blkar check test.sbx.0'
 
 erun '# corrupt second archive'
 
-erun 'dd if=/dev/urandom of=test.ecsbx.1 bs=512 seek=10 count=10'
+erun 'dd if=/dev/urandom of=test.sbx.1 bs=512 seek=10 count=10 conv=notrunc'
 
-erun 'blkar check test.ecsbx.1'
+erun 'blkar check test.sbx.1'
 
-erun '# corrupt third archive'
+erun '# we could see that both copies of the archive are corrupted'
+erun '# now we begin decoding and merge'
 
-erun 'dd if=/dev/urandom of=test.ecsbx.2 bs=512 seek=20 count=10'
+erun 'blkar decode --multi-pass test.sbx.0 test2'
 
-erun 'blkar check test.ecsbx.2'
+erun 'blkar decode --multi-pass test.sbx.1 test2'
+
+erun 'cmp test test2'
 
 clean

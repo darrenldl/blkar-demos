@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# title : Blkar demo - sort mode, adjust burst error resistance level
+# title : Blkar demo - sort mode dry run
 
 source setup.sh
 

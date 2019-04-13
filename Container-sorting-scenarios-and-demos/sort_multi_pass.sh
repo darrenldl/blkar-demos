@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# title : Blkar demo - decode multi-pass
+# title : Blkar demo - sort multi-pass
 
 source setup.sh
 

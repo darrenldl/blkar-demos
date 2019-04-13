@@ -14,12 +14,10 @@ make_random_file_MB test3 1
 blkar encode test0 --sbx-version 1 &>/dev/null
 blkar encode test1 --sbx-version 2 &>/dev/null
 blkar encode test2 --sbx-version 3 &>/dev/null
-blkar encode test3 &>/dev/null
 
 cat test0.sbx >> test0
 cat test1.sbx >> test0
 cat test2.sbx >> test0
-cat test3.ecsbx >> test0
 
 rm test1
 rm test2
@@ -28,7 +26,6 @@ rm test3
 rm test0.sbx
 rm test1.sbx
 rm test2.sbx
-rm test3.ecsbx
 
 mv test0 disk.img
 

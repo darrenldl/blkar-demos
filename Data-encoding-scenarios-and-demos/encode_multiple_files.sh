@@ -26,4 +26,6 @@ erun '# we use tar in this demo'
 
 erun 'tar cf - test0 test1 test2 | blkar encode - container.ecsbx'
 
+erun 'ls -l'
+
 clean

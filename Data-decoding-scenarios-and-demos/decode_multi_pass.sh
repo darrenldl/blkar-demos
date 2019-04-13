@@ -30,7 +30,7 @@ erun 'blkar check test.sbx.0'
 
 erun '# corrupt second archive'
 
-erun 'dd if=/dev/urandom of=test.sbx.1 bs=512 seek=10 count=10 conv=notrunc'
+erun 'dd if=/dev/urandom of=test.sbx.1 bs=512 seek=11 count=10 conv=notrunc'
 
 erun 'blkar check test.sbx.1'
 

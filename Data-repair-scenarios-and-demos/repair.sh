@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# title : Blkar demo - decode multi-pass
+# title : Blkar demo - basic repair
 
 source setup.sh
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# title : Blkar demo - encode, check, repair, decode
+
 source setup.sh
 
 set_up

@@ -31,7 +31,7 @@ erun '# we make a folder to store the rescued data'
 
 erun 'mkdir rescued_data'
 
-erun '# we now launch the rescue'
+erun '# we now launch blkar rescue mode'
 
 erun '# we also supply a log file location in case we need to interrupt blkar'
 

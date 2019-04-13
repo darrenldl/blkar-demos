@@ -5,4 +5,6 @@ if [[ $PWD != */blkar-demos ]]; then
     exit 1
 fi
 
-chmod -R u+x .
+chmod u+x *.sh
+
+chmod u+x */*.sh

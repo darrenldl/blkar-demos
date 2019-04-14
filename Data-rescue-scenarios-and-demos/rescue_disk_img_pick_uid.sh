@@ -49,7 +49,7 @@ erun 'ls -l rescued_data'
 
 erun '# we can see only the picked container is in the rescued_data folder'
 
-erun '# we check metadata just to confirm'
+erun '# we check metadata just to confirm we indeed got the right container'
 
 erun "blkar show rescued_data/$uid"
 

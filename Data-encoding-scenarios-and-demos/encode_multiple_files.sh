@@ -6,9 +6,9 @@ source setup.sh
 
 set_up
 
-make_blank_file_MB test0 5
-make_blank_file_MB test1 5
-make_blank_file_MB test2 5
+make_blank_file_MiB test0 5
+make_blank_file_MiB test1 5
+make_blank_file_MiB test2 5
 
 erun 'ls -l'
 

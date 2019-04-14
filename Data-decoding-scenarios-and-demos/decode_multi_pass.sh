@@ -6,7 +6,7 @@ source setup.sh
 
 set_up
 
-make_random_file_MB test 1
+make_random_file_MiB test 1
 
 erun 'ls -l'
 

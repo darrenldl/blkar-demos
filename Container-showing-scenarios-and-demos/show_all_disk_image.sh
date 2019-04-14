@@ -6,10 +6,10 @@ source setup.sh
 
 set_up
 
-make_random_file_MB test0 1
-make_random_file_MB test1 1
-make_random_file_MB test2 1
-make_random_file_MB test3 1
+make_random_file_MiB test0 1
+make_random_file_MiB test1 1
+make_random_file_MiB test2 1
+make_random_file_MiB test3 1
 
 blkar encode test0 --sbx-version 1 &>/dev/null
 blkar encode test1 --sbx-version 2 &>/dev/null

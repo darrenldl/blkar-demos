@@ -6,10 +6,10 @@ source setup.sh
 
 set_up
 
-make_random_file_MB test0 1
-make_random_file_MB test1 1
-make_blank_file_MB disk.img 100
-make_blank_file_MB blank 100
+make_random_file_MiB test0 1
+make_random_file_MiB test1 1
+make_blank_file_MiB disk.img 100
+make_blank_file_MiB blank 100
 
 blkar encode test0 &>/dev/null
 blkar encode test1 &>/dev/null

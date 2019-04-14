@@ -47,7 +47,7 @@ erun "blkar rescue --only-pick-uid $uid disk.img rescued_data"
 
 erun 'ls -l rescued_data'
 
-erun '# we can see only the picked container in the rescued_data folder'
+erun '# we can see only the picked container is in the rescued_data folder'
 
 erun '# we check metadata just to confirm'
 

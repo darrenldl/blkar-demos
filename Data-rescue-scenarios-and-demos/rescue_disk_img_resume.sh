@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# title : Blkar demo - rescue from disk image with interruption
+# title : Blkar demo - rescue from disk image with interruptions
 
 source setup.sh
 
